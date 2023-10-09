@@ -1,0 +1,61 @@
+\[P(ipoteze | date) = \frac{P(date | ipoteze) \cdot P(ipoteze)}{P(date)}\]
+
+/section{Silogisme}
+/subsection{Silogisme tari}
+
+Silogisme tari(logica Aristotelica, cu doua valori)
+
+daca A este adevarata atunci B e adevarata:
+A e adevarata => B e adevarata
+B e falsa => A e falsa
+
+/subsection{Silogisme slabe}
+Silogisme slabe:
+daca A e adevarata atunci B e adevarata:
+B e adevarata => A devine mai plauzibil sa fie adevarata
+A e falsa => B devine mai putin plauzibil sa fie adevarata
+
+/subsection{exemplu}
+A: Va incepe sa ploua pana cel tarziua la 10 dimineata
+B: Cerul va deveni noros inainte de ora 10 dimineata
+
+\section{Formalizare}
+\subsection{}
+A, B propozitii,\\
+$\neg A$ negatia lui A\\
+$AB$ sau $A \cap B$ - conjunctie\\
+$A+B$ sau $A \cup B$ - disjunctie\\
+$A \Rightarrow B$ - implicatie\\
+$A|B$ plauzibilitate conditionala (A stiind B)\\
+
+\subsection{Teorema lui Cox}
+adevarul este reprezentat de $Pr(A|B) = 1$ si \\
+falsitatea este reprezentata de $Pr(A|B) = 0$\\
+$Pr(A|B) + Pr(\neg A | B) = 1$\\
+$Pr(AB|C) = Pr(A|C)Pr(B|AC) = Pr(B|C)Pr(A|BC)$\\
+
+\subsection{}
+
+$\Omega$ = multimea tuturor rezultatelor posibilitatilor(spatiu de selectie)
+
+$A \subseteq B => P(A) \le P(B)$\\
+A, B independente => $P(A \cup B) = P(A) + P(B)$\\
+$A \subseteq B => P(BA) = P(B)-P(A)$\\
+$P(A|B) = \frac{P(A \cap B)}{P(B)} => P(A \cap B) = P(A|B)P(B)$\\
+$P(A_1 \cap A_2 \ldots A_n) = P(A_1 | A_2 \cap A_3 \ldots A_n) \cdot \ldots \cdot P(A_1 \ldots | A_n) P(A_n)$\\
+
+
+$P(A \cap B | C) = P(A|B \cap C)P(B|C)$\\
+
+-------------------------------------------------------------\\
+X - poate fi o variabila aleatoare uniforma\\\\
+Daca X este o moneda masluita, atunci X este veriabila aleatoare Bernoulli\\\\
+variabila alearoare binomiala: X = "nr de succese in n repetari ale unui experiment"
+$P(X=k) - {C_n}^k p^k (1-p)^{n-k}$\\\\
+
+\section{}
+$F_X(v) = P(X \le v)$, daca $F_X$ continua -> X este v a continua\\
+$F_X(v) = \integral_{-\infty}^v f_X(t) dt$\\
+$P(a \le X \le b) = F_X(b) - F_X(a) = \integral_{a}^b f_X(t) dt$\\\\
+distributia normala $f_X(t) = \frac{1}{\sqrt{2 pi} \ sigma} e^{-\frac{{t-\mu}^2}{2 \sigma^2}}$\\
+distributia exponentiala $Exp(t) = f_X(t) = \lambda e^{-\lambda t}, t \gt 0$\\

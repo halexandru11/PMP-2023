@@ -22,6 +22,12 @@ server1 = stats.gamma.rvs(gamma1[0], 0, 1 / gamma1[1], size=size)
 server2 = stats.gamma.rvs(gamma2[0], 0, 1 / gamma2[1], size=size)
 server3 = stats.gamma.rvs(gamma3[0], 0, 1 / gamma3[1], size=size)
 server4 = stats.gamma.rvs(gamma4[0], 0, 1 / gamma4[1], size=size)
+latenta = stats.expon.rvs(0, 1 / lambda1, size=size)
+
+server1 = server1 + 1 * latenta
+server2 = server2 + 2 * latenta
+server3 = server3 + 3 * latenta
+server4 = server4 + 4 * latenta
 
 total = np.concatenate((server1 * p1, server2 * p2, server3 * p3, server4 * p4))
 

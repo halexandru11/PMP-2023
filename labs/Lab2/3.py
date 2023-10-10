@@ -2,9 +2,8 @@ import numpy as np
 from scipy import stats
 
 import matplotlib.pyplot as plt
-import arviz as az
 
-np.random.seed(1)
+# np.random.seed(1)
 
 
 def generatie():
@@ -19,3 +18,27 @@ def generatie():
         else:
             output[i] += "b"
     return output
+
+
+def get_prob():
+    output = {"ss": 0.0, "sb": 0.0, "bs": 0.0, "bb": 0.0}
+
+    for _ in range(100):
+        iter = generatie()
+        output["ss"] += iter.count("ss")
+        output["sb"] += iter.count("sb")
+        output["bs"] += iter.count("bs")
+        output["bb"] += iter.count("bb")
+
+    output["ss"] /= 1000
+    output["sb"] /= 1000
+    output["bs"] /= 1000
+    output["bb"] /= 1000
+
+    return output
+
+
+prob = get_prob()
+
+plt.bar(prob.keys(), prob.values())
+plt.show()

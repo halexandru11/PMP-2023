@@ -30,10 +30,10 @@ def get_prob():
         output["bs"] += iter.count("bs")
         output["bb"] += iter.count("bb")
 
-    output["ss"] /= 1000
-    output["sb"] /= 1000
-    output["bs"] /= 1000
-    output["bb"] /= 1000
+    output["ss"] /= 100
+    output["sb"] /= 100
+    output["bs"] /= 100
+    output["bb"] /= 100
 
     return output
 

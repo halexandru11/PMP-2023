@@ -1,0 +1,37 @@
+\documentclass{article}
+    \usepackage[margin=0.7in]{geometry}
+    \usepackage[parfill]{parskip}
+    \usepackage[utf8]{inputenc}
+    
+    % Related to math
+    \usepackage{amsmath,amssymb,amsfonts,amsthm}
+
+\begin{document}
+
+Notez:
+\begin{itemize}
+  \item C - Cutremur
+  \item A - Alarma
+  \item I - Incendiu
+\end{itemize}
+
+\section*{Ex 2}
+
+Calculam probabilitatea $P(C | A)$\\
+\begin{align*}
+  P(C | A) &= \frac{P(A|C) \cdot P(C)}{P(A)}\\
+  P(C | A) &= \frac{0.98 \cdot 0.0005}{P(A)}\\
+  P(C | A) &= \frac{0.00049}{P(A)}
+\end{align*}
+
+\section*{Ex 3}
+
+Calculam probabilitatea $P(I | \neg A)$\\
+\begin{align*}
+  P(I | \neg A) &= \frac{P(I) \cdot P(\neg A | I)}{P(\neg A)}\\
+  P(I | \neg A) &= \frac{0.01 \cdot 0.005}{P(\neg A)}\\
+  P(I | \neg A) &= \frac{0.0005}{P(\neg A)}
+\end{align*}
+
+
+\end{document}

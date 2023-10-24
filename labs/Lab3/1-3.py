@@ -20,8 +20,8 @@ cpd_incendiu = TabularCPD(
     variable="Incendiu",
     variable_card=2,
     values=[
-        [0.99, 0.01],
-        [0.03, 0.97],
+        [0.99, 0.03],
+        [0.01, 0.97],
     ],
     evidence=["Cutremur"],
     evidence_card=[2],

@@ -5,6 +5,7 @@ import matplotlib.pyplot as plt
 
 df = pd.read_csv("auto-mpg.csv")
 df["horsepower"] = df["horsepower"].replace("?", "0")
+df = df[df["horsepower"] != "0"]
 df["horsepower"] = df["horsepower"].astype("int64")
 df = df.sort_values(by=["horsepower"])
 df["mpg"] = df["mpg"].astype("int64")
@@ -28,6 +29,7 @@ x = df["horsepower"].to_numpy()
 alpha_m = posterior_g["alpha"].mean().item()
 beta_m = posterior_g["beta"].mean().item()
 
+plt.scatter(df["horsepower"], df["mpg"], c="C0", s=50)
 plt.plot(
     x,
     alpha_m + beta_m * x,

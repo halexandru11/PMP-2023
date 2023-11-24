@@ -126,6 +126,8 @@ def ex3(model):
 
     result = infer.query(variables=["n"], evidence={"m": 0})
     values = result.values
+    # values[0] = P(n=0 | m=0)
+    # values[1] = P(n=1 | m=0)
     if values[0] > values[1]:
         print(f"Este mai probabil sa nu pice stema ({values[0]})")
     else:

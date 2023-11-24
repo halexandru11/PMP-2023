@@ -1,6 +1,7 @@
 import numpy as np
 import pymc as pm
 import matplotlib.pyplot as plt
+import arviz as az
 
 
 def ex1():
@@ -22,6 +23,7 @@ def ex2():
         times = pm.Normal("times", mu=mu, sigma=sigma, observed=ex1()[0])
         trace = pm.sample(1000, tune=1000, return_inferencedata=False)
 
+    az.plot_posterior(trace, var_names=["times"])
     plt.show()
 
 

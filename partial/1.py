@@ -134,5 +134,6 @@ def ex3(model):
         print(f"Este mai probabil sa pice stema ({values[1]})")
 
 
+ex1()
 model = ex2()
 ex3(model)

@@ -34,6 +34,7 @@ def statistics():
     for x in p:
         std += (x - mean) ** 2
     std /= k
+    std = std**0.5
 
     return mean, std
 

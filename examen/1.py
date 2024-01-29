@@ -52,10 +52,8 @@ def create_model(data):
         idata = pm.sample(1000)
 
     # plot the posterior distributions
-    # commented because i was running the code and the plot would show up
-    # following 2 lines should not be commented, they are correct
-    # pm.plot_posterior(idata)
-    # plt.show()
+    pm.plot_posterior(idata)
+    plt.show()
 
     wanted_age = 30
     wanted_class = 2

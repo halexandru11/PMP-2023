@@ -58,6 +58,7 @@ def create_model(data):
     wanted_age = 30
     wanted_class = 2
     posterior_g = idata.posterior.stack(samples={"chain", "draw"})
+    # compute the probability
     mu = (
         posterior_g["beta"]
         + wanted_class * posterior_g["beta"][0]
